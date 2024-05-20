@@ -12,6 +12,7 @@ import { cn } from '@/lib/utils';
 import { IShelterListViewProps } from './types';
 import { useSearchParams } from 'react-router-dom';
 import { LoadingSkeleton } from '@/components/LoadingSkeleton';
+import { QuickFilterRow } from './components/QuickFilterRow';
 
 const ShelterListView = React.forwardRef<HTMLDivElement, IShelterListViewProps>(
   (props, ref) => {
@@ -86,6 +87,7 @@ const ShelterListView = React.forwardRef<HTMLDivElement, IShelterListViewProps>(
               Limpar Filtros
             </Button>
           )}
+          <QuickFilterRow />
         </div>
         <main ref={ref} className="flex flex-col gap-4" {...rest}>
           {loading ? (
